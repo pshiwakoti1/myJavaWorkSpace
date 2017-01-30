@@ -1,0 +1,6 @@
+212.58.246.79 UK  BBC.com
+157.166.226.26 USA CNN.com
+
+wsimport -keep -s src http://www.webservicex.net/geoipservice.asmx?WSDL
+
+http://www.webservicex.net/geoipservice.asmx?WSDL

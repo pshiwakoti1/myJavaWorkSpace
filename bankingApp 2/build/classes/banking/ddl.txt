@@ -1,0 +1,12 @@
+CREATE TABLE checkingAccount
+(
+userId varchar(20) not null,
+accountNumber int(20) not null ,
+balance varchar(20) not null,
+primary key(userId)
+);
+
+insert into checkingAccount(userId,accountNumber,balance)values('root','134574345','35000');
+insert into checkingAccount(userId,accountNumber,balance)values('raju11','134500059','20000');
+
+update checkingAccount set balance=myTotal where userId='root';

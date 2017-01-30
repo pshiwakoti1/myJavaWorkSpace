@@ -1,0 +1,61 @@
+<!doctype html>
+<html ng-app="myLanguageApp">
+   
+   <head>
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+   </head>
+   
+   <body>
+      <div>
+         <label>Name:</label>
+         <input type = "text" ng-model = "yourName" placeholder = "Enter your name here">
+         <hr />
+         
+         <h1>Hello {{yourName}}!</h1>
+      </div>
+      <div ng-bind="yourName">
+      
+      </div>
+      
+     
+     
+      <div ng-controller="languages">
+      
+      Select your favourite language:
+      <button ng-click="php()">PHP</button>
+      <button ng-click="cpp()">C++</button>
+      <button ng-click="javascript()">JavaScript</button>
+      <button ng-click="java()">Java</button>
+      <br>
+      You have selected: {{myFavLanguage}}
+      </div>
+      
+      <script>
+      var application = angular.module('myLanguageApp', []);
+      application.controller('languages', function($scope){
+      
+      $scope.myFavLanguage='None';
+      $scope.php= function(){
+        $scope.myFavLanguage='PHP';
+      }
+      $scope.cpp= function(){
+        $scope.myFavLanguage='C++';
+      }
+       $scope.javascript= function(){
+        $scope.myFavLanguage='javascript';
+      }
+       $scope.java= function(){
+        $scope.myFavLanguage='Java';
+      }
+      
+      });
+      </script>
+      
+      <div>
+      Currency: <input type="text" ng-model="price">
+      Your price is: {{price | currency:"Rs. "}}
+      </div>
+      
+      
+      </body>
+</html>
