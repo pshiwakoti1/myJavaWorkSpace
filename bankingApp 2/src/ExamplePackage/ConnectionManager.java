@@ -18,7 +18,7 @@ public class ConnectionManager {
          
          try
          {            	
-            connection = DriverManager.getConnection(url,"root","wisdom1A%"); 
+            connection = DriverManager.getConnection(url,"root","test"); 
              								
          }
          
